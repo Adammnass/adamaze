@@ -1,29 +1,44 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Adam Nassir</title>
+    <title>Facture en Javascript</title>
     <link rel="stylesheet" href="style.css">
-
-
 </head>
-<h1>Adam Nassir</h1>
-
 <body>
-    <p><div class="parent"> <!-- Conteneur parent -->
-        <div class="square">
-            <a href="mission1/index.html">Mission 1</a> <br>
-            <a href="tp1/index.html">Tp 1 </a> <br>
-            <a href="tp2/index.html">Tp 2 </a> <br>
-            <a href="mission2/index.html">Mission 2 </a> <br>
-            <a href="certificat/index.html"> Certification </a> <br>
-            <a href="Formulaire_event/index.html">Formulaire Évènement</a><br>
-            <a href="tp1_bd/index.html">TP1 BD</a> <br>
-             <a href="tp4/index.html">TP 4</a> <br>
-             <a href="tp6/index.html">TP 6</a> <br>
-            <a href="facture/index.html">Facture</a> <br>
-    </div></p>
-    
+    <div class="container">
+        <h2>Facture en Javascript</h2>
+        <table>
+            <tr>
+                <th>Article</th>
+                <th>Prix</th>
+                <th>Quantité</th>
+                <th>Résultat</th>
+            </tr>
+            <tr>
+                <td><input type="text" id="article1" value="E1"></td>
+                <td><input type="number" id="price1" value="13"></td>
+                <td><input type="number" id="quantity1" value="2"></td>
+                <td><span id="result1">0</span></td>
+            </tr>
+            <tr>
+                <td><input type="text" id="article2" value="E2"></td>
+                <td><input type="number" id="price2" value="33"></td>
+                <td><input type="number" id="quantity2" value="3"></td>
+                <td><span id="result2">0</span></td>
+            </tr>
+            <tr>
+                <td><input type="text" id="article3" value="E3"></td>
+                <td><input type="number" id="price3" value="22"></td>
+                <td><input type="number" id="quantity3" value="3"></td>
+                <td><span id="result3">0</span></td>
+            </tr>
+        </table>
+        <button class="button calculate" onclick="calculateTotal()">Résultat</button>
+        <button class="button reset" onclick="resetForm()">Réinitialiser</button>
+        <div class="total">Total TTC: <span id="totalResult">0</span></div>
+    </div>
+    <script src="script.js"></script>
 </body>
-</html>t
+</html>
